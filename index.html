@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+      pre code {
+        background-color: #d5dae3;
+        border: 1px solid #999;
+        display: block;
+        padding: 10px;
+      }
+      </style>
+      <meta char set="utf-8">
+      <title>Arduino Para Lalito</title>
+      <link rel="stylesheet" href="MyCSS.css">
+  </head>
+  <body>
+    <h1>Proyecto Blink</h1>
+      <h2>Introducción</h2>11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink.
+      <p>En Arduino en lugar de decir archivo o programa, se dice <b>sketch</b> . El sketch mas sencillo de todos se llama Blink, que significa parpadeo, y es con este sketch que vamos a comenzar. Es fácil  descargarlo (o sea obtenerlo) desde internet, <a href="https://youtu.be/Lq1o6yeFsWk">intentalo</a>.</p>
+      <h2>Las partes del sketch Blink</h2>
+
+        <h3>El sketch Blink</h3>
+        <p>La lista que sigue es del sketch Blink completo, tal como se descargó desde Internet, este sketch contiene <b>instrucciones</b> que vamos a cargar en los chips de memoria del Arduino, una vez que las instrucciones esten en la memoria, Arduino va a ejecutar el sketch.</p>
+        <p>Ejecutar el sketch significa que Arduino va a leer el sketch que pusimos en su memoria, lo va a leer de arriba para abajo empezando en la primera linea (igual que nosotros los humanos leemos), y al encontrar una instruccion, la ejecuta y pasa a la siguiente linea, y asi hasta que llega 11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink.al final.</p>
+          <pre>
+            <code>
+              /*
+              Blink
+
+              Turns an LED on for one second, then off for one second, repeatedly.
+
+              Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO it
+              is attached to11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink. digital pin 13, on MKR1000 on pin 6. LED_BUILTIN is set to the
+              correct LED pin independent of which board is used. If you want to know what pin
+              the on-board LED is connected to on your Arduino model, check the Technical
+              Specs of your board at: https://www.arduino.cc/en/Main/Products
+
+              modified 8 May 2014 by Scott Fitzgerald modified 2 Sep 2016 by Arturo Guadalupi
+              modified 8 Sep 2016 by Colby Newman
+
+              This example code is in the public domain.
+
+              https://www.ar11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink.duino.cc/en/Tutorial/BuiltInExamples/Blink
+              */
+
+              // the setup function runs once when you press reset or power the board
+              void setup()
+              {
+                // initialize digital pin LED_BUILTIN as an output.
+                pinMode(LED_BUILTIN, OUTPUT);
+              }
+
+              // the loop function runs over and over again forever
+              void loop()
+              {
+                digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+                delay(1000);                       // wait for a second
+                digitalWrite11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink.(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+                delay(1000);                       // wait for a second
+              }
+            </code>
+          </pre>
+          <p>Ejecutar el sketch significa que Arduino va a leer el sketch que pusimos en su memoria, lo va a leer de arriba para abajo empezando en la primera linea (igual que nosotros los humanos leemos), y al encontrar una instruccion, la ejecuta y pasa a la siguiente linea, y asi hasta que llega al final.</p>
+
+        <h3>Los comentarios del sketch Blink.</h3>
+
+          <p>El sketch tambi11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink.en contiene varios <b>comentarios</b>, estos comentarios no son instrucciones para grabarse en los chips de memoria del Arduino, sino que son unicamente para informar cosas al programador humano que lee el sketch (tú en este caso).</p>
+          <p>En el listado que sigue los comentarios se muestran de color, unos en rojo, otros en azul. Los comentarios en rojo se llaman <b>block de comentarios</b>, y los comentarios en azul se llaman <b>comentarios en linea</b>.</p>
+          <pre>
+            <code>
+              <div style="color: red;">
+                /*
+                Blink
+
+                Turns an LED on for one second, then off for one second, repeatedly.
+
+                Most Arduino11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink.s have an on-board LED you can control. On the UNO, MEGA and ZERO it
+                is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN is set to the
+                correct LED pin independent of which board is used. If you want to know what pin
+                the on-board LED is connected to on your Arduino model, check the Technical
+                Specs of your board at: https://www.arduino.cc/en/Main/Products
+
+                modified 8 May 2014 by Scott Fitzgerald modified 2 Sep 2016 by Arturo Guadalupi
+                modified 8 Sep 2016 by Colby Newman
+
+                This example11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink. code is in the public domain.
+
+                https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
+                */
+              </div>
+              <div style="color: blue;">
+                // the setup function runs once when you press reset or power the board
+              </div>
+              void setup()
+              {
+              <div style="color: blue;"</div>
+                // initialize digital pin LED_BUILTIN as an output.
+              </div>
+                pinMode(LED_11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink.BUILTIN, OUTPUT);
+              }
+
+              <div style="color: blue;">
+                // the loop function runs over and over again forever
+              </div>
+              void loop()
+              {
+                digitalWrite(LED_BUILTIN, HIGH); <span style="color: blue;">//turn the LED11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink. on (HIGH is the voltage level)</span>
+                delay(1000);<span style="color: blue;">// wait for a second</span>
+                digitalWrite(LED_BUILTIN, LOW);<span style="color: blue;">// turn the LED off by making the voltage low</span>
+                delay(1000);<span style="color: blue;">//wait for a second</span>
+              }
+            </code>
+          </pre>
+          <p>Nota que el indicador /* nos dice que comienza el bloque de comentario, y que  el indicador */ nos dice que termina el bloque de comentario. También date cuenta que el indicador // indica que a partir de alli el resto del renglon es un comentario.</p>
+
+        <h3>El sketch Blink sin los comentarios</h3>
+        <p>El siguiente listado muestra todo lo que queda del sketch original cuando eliminamos todos los comentarios y nos quedamos solamente con las instrucciones.</p>
+          <pre>
+            <code>
+              void setup(){
+                pinMode(LED_BUILTIN, OUTPUT);
+              }
+
+              void loop()
+              {
+                digitalWrite(LED_BUILTIN, HIGH);
+                delay(1000);
+                digitalWrite(LED_BUILTIN, LOW);
+                delay(1000);
+              }11 visualizaciones  1 jul 2022  Arduino: Aprende a cargar el sketch blink.
+            </code>
+          </pre>
+          <p>Este sketch sin los comentarios, se ve mucho mas sencillo que nuestro sketch original.No hemos quitado los comentarios porque sean inútiles o estorbosos, simplemente se trata de que como estamos empezando con esto, la simplificacion lograda nos es de gran ayuda.</p>
+          <h3>Aqui debe ir un encabezado de nivel 3</h3>
+            <pre>
+              <code>
+                <div style="color: red;">
+                  void setup()
+                  {
+                    pinMode(LED_BUILTIN, OUTPUT);
+                  }
+                </div>
+                <div style="color: blue;">
+                  void loop()
+                  {
+                    digitalWrite(LED_BUILTIN, HIGH);
+                    delay(1000);
+                    digitalWrite(LED_BUILTIN, LOW);
+                    delay(1000);
+                  }
+                </div>
+              </code>
+            </pre>
+</body>
+</html>
